@@ -312,27 +312,17 @@ function create_csv_data_file()
 	for (var i = 0; i < gameId.length; i++)
 	{
 		csv_file += String(gameId[i])+",";
-		csv_file += String(champion[i])+",";
-		csv_file += String(convert_queue(queue[i]))+",";
-		csv_file += String(season[i])+",";
-		csv_file += String(timestamp[i])+",";
 		csv_file += String(gameCreationConverted[i])+",";
-		csv_file += String(role[i])+",";
-		csv_file += String(lane[i])+",";
-		csv_file += String(convert_map_role_lane(role[i],lane[i]))+",";
-		csv_file += String(gameDuration[i])+",";
-		csv_file += String(win[i])+",";
+		csv_file += String(champion[i])+",";
 		csv_file += String(kills[i])+",";
 		csv_file += String(deaths[i])+",";
 		csv_file += String(assists[i])+",";
-		csv_file += String(kda[i])+",";
-		csv_file += String(totalMinionsKilled[i])+",";
-		csv_file += String(csmin[i])+",";
-		csv_file += String(visionScore[i])+",";
-		csv_file += String(vsmin[i])+",";
-		csv_file += String(visionWardsBoughtInGame[i])+",";
+		csv_file += String(win[i])+",";
 		csv_file += String(wardsPlaced[i])+",";
-		csv_file += String(wardsKilled[i])+",";
+		csv_file += String(visionWardsBoughtInGame[i])+",";
+		csv_file += String(visionScore[i])+",";
+		csv_file += String(totalMinionsKilled[i])+",";
+		csv_file += String(gameDuration[i])+",";
 		csv_file += String(totalKills[i]);
 		csv_file += "\n";
 	}
