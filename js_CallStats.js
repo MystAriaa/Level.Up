@@ -308,10 +308,11 @@ function reset_all_data()
 
 function create_csv_data_file()
 {
-	var csv_file = "GameID,Champion,QueueID,SeasonID,Timestamp,Date,Role,Lane,Estimated Position,Game Duration,Win,Kill,Death,Assist,KDA,CS,CS/min,VS,VS/min,Pink Ward,Ward Placed,Ward Killed,Total TeamKill" + "\n";
+	var csv_file = "";
+	//var csv_file = "GameID,Champion,QueueID,SeasonID,Timestamp,Date,Role,Lane,Estimated Position,Game Duration,Win,Kill,Death,Assist,KDA,CS,CS/min,VS,VS/min,Pink Ward,Ward Placed,Ward Killed,Total TeamKill" + "\n";
 	for (var i = 0; i < gameId.length; i++)
 	{
-		csv_file += String(gameId[i])+",";
+		//csv_file += String(gameId[i])+",";
 		csv_file += String(gameCreationConverted[i])+",";
 		csv_file += String(champion[i])+",";
 		csv_file += String(kills[i])+",";
