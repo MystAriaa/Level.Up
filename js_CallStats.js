@@ -318,6 +318,10 @@ function create_csv_data_file()
 		csv_file += String(kills[i])+",";
 		csv_file += String(deaths[i])+",";
 		csv_file += String(assists[i])+",";
+		if (win[i] == "Fail")
+		{
+			csv_file += "Lose"+",";
+		}
 		csv_file += String(win[i])+",";
 		csv_file += String(wardsPlaced[i])+",";
 		csv_file += String(visionWardsBoughtInGame[i])+",";
