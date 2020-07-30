@@ -330,7 +330,7 @@ function create_csv_data_file()
 		csv_file += String(visionWardsBoughtInGame[i])+",";
 		csv_file += String(visionScore[i])+",";
 		csv_file += String(totalMinionsKilled[i])+",";
-		csv_file += String(csv_files += Utilities.formatDate(gameDuration[i], "GMT", "mm'.'ss"))+","; 
+		csv_file += String(Utilities.formatDate(gameDuration[i], "GMT", "mm'.'ss"))+","; 
 		csv_file += String(totalKills[i]);
 		csv_file += "\n";
 	}
