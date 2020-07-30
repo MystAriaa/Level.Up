@@ -235,6 +235,12 @@ function calc_winrate()
 	return ratio;
 }
 
+function convert_time_sec_to_min(time_sec)
+{
+	var time_min = Math.round(time_sec/60);
+	return time_min;
+}
+
 function reset_all_data()
 {
 	gameId = [];
@@ -312,7 +318,6 @@ function create_csv_data_file()
 	//var csv_file = "GameID,Champion,QueueID,SeasonID,Timestamp,Date,Role,Lane,Estimated Position,Game Duration,Win,Kill,Death,Assist,KDA,CS,CS/min,VS,VS/min,Pink Ward,Ward Placed,Ward Killed,Total TeamKill" + "\n";
 	for (var i = 0; i < gameId.length; i++)
 	{
-		//csv_file += String(gameId[i])+",";
 		csv_file += String(gameCreationConverted[i])+",";
 		csv_file += String(champion[i])+",";
 		csv_file += String(kills[i])+",";
@@ -330,7 +335,7 @@ function create_csv_data_file()
 		csv_file += String(visionWardsBoughtInGame[i])+",";
 		csv_file += String(visionScore[i])+",";
 		csv_file += String(totalMinionsKilled[i])+",";
-		csv_file += String(Utilities.formatDate(gameDuration[i], "GMT", "mm'.'ss"))+","; 
+		csv_file += String(convert_time_sec_to_min(gameDuration[i]))+","; 
 		csv_file += String(totalKills[i]);
 		csv_file += "\n";
 	}
