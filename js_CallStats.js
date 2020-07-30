@@ -322,7 +322,10 @@ function create_csv_data_file()
 		{
 			csv_file += "Lose"+",";
 		}
-		csv_file += String(win[i])+",";
+		else
+		{
+			csv_file += String(win[i])+",";
+		}	
 		csv_file += String(wardsPlaced[i])+",";
 		csv_file += String(visionWardsBoughtInGame[i])+",";
 		csv_file += String(visionScore[i])+",";
