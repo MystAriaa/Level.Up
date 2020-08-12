@@ -1,0 +1,141 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="main_style.css" />
+    <link rel="shortcut icon" href="assets/favicon.ico">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+</head>
+
+<body class="page">
+	<div id="loading" style="visibility: hidden">
+		<img src='assets/loading_background.png' class="loading_background">
+		<img src='assets/loading_icon.gif' class="loading_icon">
+	</div>
+
+    <div class="bandeau_top" id="bandeau_top">
+    	<a href="index.html">
+        	<img src='assets/Title-web2.png' class="mini_logo" href="index.html" >
+    	</a>
+
+    	<div class="bar_form1">
+    		<input type="text" id="Summoner_Name" value="" placeholder="Summoner name" class="input_name">
+	        <SELECT id="Region" size="1" class="input_region">
+	            <OPTION>EUW
+	            <OPTION>NA
+	            <OPTION>KR
+	            <OPTION>EUN
+	            <OPTION>BR
+	            <OPTION>JP1     
+	            <OPTION>LA1
+	            <OPTION>LA2
+	            <OPTION>OC
+	            <OPTION>RU
+	            <OPTION>TR
+	        </SELECT>
+	        <button id="Main_Button" class="GetStats">Get stats</button>        
+	    </div>
+	        
+	    <div id="rank_role_icon_box" class="rank_role_icon_box">
+	 	</div>
+
+	    <div>
+	        <p id="Summoner_Id" class="Summoner_Id"></p>
+	        <p id="Account_Id" class="Account_Id"></p>
+	        <button id="Select_Game_Button" class="Select_Game_Button">Update Graph</button>
+	    </div>
+
+	    <div class="Error_Menu">
+	        <div class="error_box" id="error_box">
+	    	</div>
+	    </div>
+    </div>
+
+    <div class="Summoner_Info">
+        <p id="Account_Name" class="Account_name"></p>
+        <div id="donutchart" class="donutchart"></div>
+	    <p id ="winrate_value" class="winrate_value"></p>
+    </div>
+
+    </br></br>
+    <div class="left_info" id="left_info">
+    	<div id="Summoner_icon" class="Summoner_icon"></div>    
+	    <p class="Global_Average_Value">Global Average Value :</p>
+		<p id ="KDA_value" class="KDA_value"></p>
+	    <p id ="KP_value" class="KP_value"></p>
+	    <p id ="CS_value" class="CS_value"></p>
+	    <p id ="VS_value" class="VS_value"></p>
+	</div>
+
+	<div class="left_goals" id="left_goals">
+	    <p class="goals">Goals :</p>
+		<p id ="KDA_goals" class="KDA_goals">1</p>
+	    <p id ="KP_goals" class="KP_goals">2</p>
+	    <p id ="CS_goals" class="CS_goals">3</p>
+	    <p id ="VS_goals" class="VS_goals">4</p>
+	</div>
+
+    <div class="middle2" id="accueil">
+        <img src='assets/Title-web2.png' class="logo2"  href="main.php">
+       
+            <div class="bar_form2">
+                <input type="text" name="Summoner_Name" id="Summoner_Name_Bis" required class="input_name2" placeholder="Summoner Name">
+                <SELECT name="Region" id="Region_Bis" size="1" class="input_region2">
+                    <OPTION>EUW
+                    <OPTION>NA
+                    <OPTION>KR
+                    <OPTION>EUN
+                    <OPTION>BR
+                    <OPTION>JP1     
+                    <OPTION>LA1
+                    <OPTION>LA2
+                    <OPTION>OC
+                    <OPTION>RU
+                    <OPTION>TR
+                </SELECT>
+                
+                <button id="Button_Bis" class="input_button2">Get Stats !</button> 
+            </div>
+            <div class="other_form2">
+            	<p class="text_filter_option :">Other filter options</p>
+                <input type="checkbox" name="Only_Ranked" id="Only_Ranked_Bis" class="input_ranked2" value="checked">
+                <p class="label2">Ranked Games</p>
+                <SELECT name="Role" id="Role_Bis" size="1" class="input_role2">
+                    <OPTION>Ø Role
+                    <OPTION>Top
+                    <OPTION>Jungle
+                    <OPTION>Mid
+                    <OPTION>ADC
+                    <OPTION>Support     
+                </SELECT>
+                <input type="date" id="DateGame_Bis" class="input_date2" value="2020-07-22" min="2015-01-01" max="2020-12-31">
+            </div> 
+        
+        <p class="accueil_text2">Level.Up is a personal performance analysis tool for League of Legends.<br>Level.Up easily brings you key statistics and their evolutions through your games to improve on different aspects of the game.</p>
+    </div>
+
+    <div class="second_body">
+    	<div id="pre_gamelist" class="pre_gamelist">
+	    </div>
+
+	    <div class="chart_list">
+		    <div id="chart_slot_1" class="chart_box"></div>
+		    <div id="chart_slot_2" class="chart_box"></div>
+		    <div id="chart_slot_3" class="chart_box"></div>
+		    <div id="chart_slot_4" class="chart_box"></div>
+		    <div id="chart_slot_5" class="chart_box"></div>
+	    </div>	 
+
+		<div id="pre_stats_table" class="pre_stats_table">
+		</div>   
+    </div>
+    
+    <div class="bandeau_bottom">
+        <p id ="disclaimer" class="disclaimer">Level.Up isn't endorsed by Riot Games and doesn't reflect the views or opinions of Riot Games or anyone officially involved in producing or managing Riot Games properties. Riot Games, and all associated properties are trademarks or registered trademarks of Riot Games, Inc.</p>
+    </div>
+
+    <script src="js_CallStats.js"></script>
+</body>
+
+</html>
