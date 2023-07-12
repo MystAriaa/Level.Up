@@ -1,0 +1,59 @@
+CREATE TABLE summoner_info (id INT AUTO_INCREMENT PRIMARY KEY, puuid VARCHAR(100), summoner_name VARCHAR(25), profile_icon INT(10));
+
+CREATE TABLE $puuid_games (
+    game_id VARCHAR(20),
+    plateform VARCHAR(5),
+    game_duration INT(10),
+    champion_id INT(5),
+    role VARCHAR(10),
+    queue_id INT(5),
+    win TINYINT(1),
+    team_id INT(5),
+    nb_kill INT(5),
+    nb_death INT(5),
+    nb_assist INT(5),
+    kda FLOAT(8, 5),
+    kp FLOAT(5, 3),
+    total_damage_dealt INT(10),
+    damage_per_minute FLOAT(50, 3),
+    total_damage_taken INT(10),
+    total_gold INT(10),
+    gold_per_minute FLOAT(7, 3),
+    total_level INT(2),
+    total_experience INT(6),
+    experience_per_minute FLOAT(10,3),
+    total_minion_killed INT(5),
+    minion_per_minute FLOAT(5,1),
+    minion_advantage INT(4),
+    vision_score INT(4),
+    vision_score_per_minute FLOAT(4, 2),
+    vision_ward_bought INT(5),
+    vision_advantage FLOAT(4, 2));
+
+
+CREATE TABLE summoner_stats (
+    puuid VARCHAR(100),
+    winrate FLOAT(5,2),
+    kda FLOAT(8, 5),
+    kp FLOAT(5, 3),
+    minion_per_minute FLOAT(3,1),
+    vision_score_per_minute FLOAT(3, 2),
+    average_kill INT(5),
+    average_death INT(5),
+    average_assist INT(5),
+    nb_total_game INT
+);
+    
+
+CREATE TABLE summoner_filter (id INT AUTO_INCREMENT PRIMARY KEY, puuid VARCHAR(100), ranked TINYINT(1), champion INT(5));
+
+
+
+
+CREATE TABLE datadragon_version (id INT PRIMARY KEY, d_version VARCHAR(20));
+
+
+
+CREATE TABLE datadragon_champion (c_key INT(5) PRIMARY KEY, c_id VARCHAR(20), c_name VARCHAR(20));
+
+CREATE TABLE queue_info (id INT(5) AUTO_INCREMENT PRIMARY KEY, queue_id INT(5), map VARCHAR(30), description VARCHAR(1000), note VARCHAR(1000));

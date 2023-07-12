@@ -14,17 +14,17 @@
 		<form method="GET" action="/levelup/dashboard.php" class="bar_form">
 			<input type="text" name="Summoner_Name" required class="input_name" placeholder="Summoner Name">
 			<SELECT name="Region" size="1" class="input_region">
-				<OPTION>EUW
-				<OPTION>NA
-				<OPTION>KR
-				<OPTION>EUN
-				<OPTION>BR
-				<OPTION>JP1     
-				<OPTION>LA1
-				<OPTION>LA2
-				<OPTION>OC
-				<OPTION>RU
-				<OPTION>TR
+				<OPTION>Europe West
+				<OPTION>North America
+				<OPTION>Europe Nordic & East
+				<OPTION>Korea
+				<OPTION>Japan
+				<OPTION>Russia    
+				<OPTION>Turkey
+				<OPTION>Brazil
+				<OPTION>Latin America North
+				<OPTION>Latin America South
+				<OPTION>Oceania
 			</SELECT>
 			
 			<button class="input_button">Get Stats !</button>
